@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "25l3x5pZmivvtYNGeV7NpVr4AJWglhb29+RVTbmFzHzPurAadGZcxBXtpv7RGTXMMPO+KmNX5MimRHU9iKOWyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\acer\\Documents\\Semester 03\\GUI\\Project 2\\SMS_UOR\\SMS_UOR\\SMS_UOR\\SMS_UOR.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\acer\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.18\\microsoft.windowsdesktop.app.ref.6.0.18.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.18\\microsoft.netcore.app.ref.6.0.18.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.18\\microsoft.aspnetcore.app.ref.6.0.18.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.18\\microsoft.netcore.app.host.win-x64.6.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}

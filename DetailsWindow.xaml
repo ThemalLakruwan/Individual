@@ -1,0 +1,79 @@
+﻿<Window x:Class="SMS_UOR.DetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SMS_UOR"
+        mc:Ignorable="d"
+        Title="Details" Height="450" Width="800">
+    <Window.DataContext>
+        <local:DetailsWindowVM/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Opacity="0.89" ImageSource="C:/Users/acer/Documents/Semester 03/GUI/Project 2/UMS1/Images/bg_image1.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" Margin="10 55 10 30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="110"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource Normal_text}" Text="First Name :" Margin="5"/>
+                <TextBlock Style="{StaticResource Normal_text}" Text="{Binding Firstname , UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource Normal_text}" Text="Last Name :" Margin="5"/>
+                <TextBlock Style="{StaticResource Normal_text}" Text="{Binding Lastname , UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource Normal_text}" Text="GPA :" Margin="5"/>
+                <TextBlock Style="{StaticResource Normal_text}" Text="{Binding Dob , UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource Normal_text}" Text="E-Mail :" Margin="5"/>
+                <TextBlock Style="{StaticResource Normal_text}" Text="{Binding Email , UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource Normal_text}" Text="DOB :" Margin="5"/>
+                <TextBlock Style="{StaticResource Normal_text}" Text="{Binding Gpa , UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Row="5" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource Normal_text}" Text="More Info :" Margin="5"/>
+            </StackPanel>
+            <Grid Grid.Row="6" Background="LightCyan" Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="63*"/>
+                    <ColumnDefinition Width="307*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Style="{StaticResource Normal_text}" 
+                           HorizontalAlignment="Left" 
+                           TextAlignment="Left" 
+                           TextWrapping="Wrap" 
+                           Text="{Binding Other , UpdateSourceTrigger=PropertyChanged}" 
+                           Foreground="Black" Margin="5,5,0,5" Width="355" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Button Grid.Row="7" Height="30" 
+                    Style="{StaticResource RoundButtonTemplate}" 
+                    Content="OK"
+                    Command="{Binding OKCommand}" Margin="140,29,140,-29"/>
+        </Grid>
+
+        <Image Grid.Column="0" Source="{Binding ImgURL}" Margin="50 50 0 50"/>
+
+
+    </Grid>
+</Window>
